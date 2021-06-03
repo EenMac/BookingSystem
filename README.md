@@ -1,5 +1,4 @@
 # BookingSystem
-The logic for a BookingSystem
 
 ## Scope
 
