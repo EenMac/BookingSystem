@@ -1,6 +1,7 @@
 package com.CodeClan.BookingSystem.BookingSystem;
 
 import com.CodeClan.BookingSystem.BookingSystem.models.Course;
+import com.CodeClan.BookingSystem.BookingSystem.models.Customer;
 import com.CodeClan.BookingSystem.BookingSystem.repositories.BookingRepository;
 import com.CodeClan.BookingSystem.BookingSystem.repositories.CourseRepository;
 import com.CodeClan.BookingSystem.BookingSystem.repositories.CustomerRepository;
@@ -34,4 +35,13 @@ class BookingSystemApplicationTests {
 		List<Course> foundCourseList = courseRepository.getByRating(5);
 		assertEquals("Software development", foundCourseList.get(0).getName());
 	}
+
+	@Test
+	void getAllCustomerByCourse() {
+
+		List<Customer> foundCustomer = customerRepository.getByBookingsCourseId(1L);
+		assertEquals("John",foundCustomer.get(0).getName());
+	}
+
+
 }

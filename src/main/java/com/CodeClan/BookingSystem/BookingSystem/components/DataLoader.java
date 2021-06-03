@@ -27,7 +27,7 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args){
-        Customer customer1 = new Customer("John", "Devon");
+        Customer customer1 = new Customer("John", "Devon",  26);
         customerRepository.save(customer1);
 
         Course course1 = new Course("Software development", "Edinburgh", 5);

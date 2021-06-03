@@ -20,14 +20,19 @@ public class Customer {
     @Column(name = "customer_location")
     private String location;
 
+    @Column(name = "customer_age")
+    private int age;
+
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     @JsonBackReference
     private List<Booking> bookings;
 
-    public Customer(String name, String location) {
+    public Customer(String name, String location, int age) {
         this.name = name;
         this.location = location;
+        this.age = age;
         this.bookings = new ArrayList<>();
+
     }
 
     public Customer() {
