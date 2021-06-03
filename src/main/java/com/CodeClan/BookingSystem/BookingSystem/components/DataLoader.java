@@ -36,7 +36,6 @@ public class DataLoader implements ApplicationRunner {
         Booking booking1 = new Booking("18/03/2021", course1, customer1);
         bookingRepository.save(booking1);
 
-
     }
 
 }
