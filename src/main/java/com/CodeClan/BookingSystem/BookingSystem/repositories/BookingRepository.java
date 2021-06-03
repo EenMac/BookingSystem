@@ -1,4 +1,7 @@
 package com.CodeClan.BookingSystem.BookingSystem.repositories;
 
-public class BookingRepository {
+import com.CodeClan.BookingSystem.BookingSystem.models.Booking;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class BookingRepository extends JpaRepository<Booking, Long>{
 }
