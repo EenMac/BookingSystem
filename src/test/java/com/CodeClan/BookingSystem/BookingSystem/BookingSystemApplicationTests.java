@@ -43,5 +43,10 @@ class BookingSystemApplicationTests {
 		assertEquals("John",foundCustomer.get(0).getName());
 	}
 
+	@Test
+	void getAllCourseByCustomer() {
 
+		List<Course> foundCourse = courseRepository.getByBookingsCustomerId(1L);
+		assertEquals("Software development", foundCourse.get(0).getName());
+	}
 }
